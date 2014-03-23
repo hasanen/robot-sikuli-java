@@ -3,6 +3,11 @@ robot-sikuli-java
 
 Basic setup for Robot Framework and Sikuli. 
 
+## Prerequisites
+* [Vagrant](http://www.vagrantup.com/downloads.html)
+* [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+* Git
+
 ## Setup
 
 After cloning go through these steps. `commands` are ment to be run in console.
