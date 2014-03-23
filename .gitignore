@@ -1,0 +1,4 @@
+.DS_Store
+.vagrant
+lib
+version-checker.sik/*.class

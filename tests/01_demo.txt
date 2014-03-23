@@ -1,0 +1,49 @@
+
+*** Settings ***
+
+Documentation   Pilotti
+Library         Selenium2Library
+Library         version_checker.VersionChecker
+
+Suite Setup     Open Maximized Browser    http://www.google.com    firefox
+Suite Teardown  Close Browser
+
+*** Variables ***
+
+
+*** Test Cases ***
+
+Firefox version is 28
+    Open Help Menu
+    Click About Firefox
+    Version Number Is    28.0
+    Close About Dialog
+
+Firefox version is not 29
+    Open Help Menu
+    Click About Firefox
+    Version Number Is Not   29.0
+    Close About Dialog
+
+*** Keywords ***
+
+Open Maximized Browser    [Arguments]    ${url}     ${browser}
+    Open Browser    ${url}     ${browser}
+    Maximize Browser Window
+
+Open Help Menu
+    Click By Image     home
+
+Click About Firefox
+    Click By Image     about_firefox
+
+Version Number Is    [Arguments]    ${version}
+    ${match}=    Version Is     ${version}
+    Should Be True     ${match}
+
+Version Number Is Not    [Arguments]    ${version}
+    ${match}=     Version Is     ${version}
+    Should Not Be True     ${match}
+
+Close About Dialog
+    Click By Image     close
