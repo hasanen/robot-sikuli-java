@@ -5,7 +5,7 @@ Basic setup for Robot Framework and Sikuli.
 
 ## Setup
 
-After cloning run these commands
+After cloning go through these steps. `commands` are ment to be run in console.
 * `git submodule init`
 * `git submodule update`
 * `vagrant up`
