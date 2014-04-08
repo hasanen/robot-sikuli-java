@@ -9,7 +9,7 @@ class VersionChecker(object):
     self.appCoordinates = coordinates
     self.appRegion = Region(*self.appCoordinates)
     self.timeout = timeout
-    addImagePath("version-checker.sik")
+    addImagePath("version-checker-sikuli.sik")
 
   def clickByImage(self, *args):
     wait(args[0] + '.png', self.timeout)
