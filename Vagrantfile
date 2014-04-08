@@ -37,5 +37,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "java"
     chef.add_recipe "robotframework_selenium2library_java"
     chef.add_recipe "sikuli"
+    chef.add_recipe "robotfw"
   end
 end
